@@ -1,17 +1,17 @@
 ### Swift Package Manager ###
 
-MailCore 2 is available through [Swift Package Manager](https://swift.org/package-manager/).
+MailCore 2 tersedia melalui [Swift Package Manager](https://swift.org/package-manager/).
 
-1. In Xcode click `File` -> `Swift Packages` -> `Add Package Dependency...`
-2. Paste the following URL: `https://github.com/MailCore/mailcore2`
-3. On the `Choose Package Options` screen, under `Rules` switch from `Version` to `Branch` (`Branch: master`) will be the default
-4. Click `Next` -> `Next` -> `Finish`
+1. Dalam Xcode klik `File` -> `Swift Packages` -> `Add Package Dependency...`
+2. Tempel URL berikut: `https://github.com/MailCore/mailcore2`
+3. Pada layar `Choose Package Options`, di bawah `Rules` beralih dari `Version` ke `Branch` (`Branch: master`) akan menjadi default
+4. Klik `Berikutnya` -> `Berikutnya` -> `Selesai`
 
-**The following steps are to resolve an issue with the current version of Xcode 12, once the issue is fixed they will be unnecessary and removed.**
+**Langkah-langkah berikut adalah untuk menyelesaikan masalah dengan versi Xcode 12 saat ini, setelah masalah diperbaiki, mereka tidak perlu dan dihapus.**
 
-4. Select `<YOUR_PROJECT>` -> `<YOUR_TARGET>` -> `Build Phases` 
-5. Click  `+` -> `New Copy Files Phase`, then change `Destination` to `Frameworks` in new build phase
-6. Click `+` -> `New Run Script Phase`, then paste the script box:
+4. Pilih `<YOUR_PROJECT>` -> `<YOUR_TARGET>` -> `Build Phases`
+5. Klik `+` -> `New Copy Files Phase`, lalu ubah `Destination` menjadi `Frameworks` di fase build baru
+6. Klik `+` -> `New Run Script Phase`, lalu tempel kotak skrip:
 ```
 if [ "$PLATFORM_NAME" == "macosx" ]
 then
@@ -63,9 +63,9 @@ Download the latest [build for OS X](http://d.etpan.org/mailcore2-deps/mailcore2
 
 ### Build for iOS/OSX ###
 
-1. If you're migrating from MailCore1, you should first clean your build folder.
-2. Checkout MailCore2 into a directory relative to your project.
-3. Under the `build-mac` directory, locate the `mailcore2.xcodeproj` file, and drag this into your Xcode project.
+1. Jika Anda bermigrasi dari MailCore1, Anda harus terlebih dahulu membersihkan folder build Anda.
+2. Checkout MailCore2 ke dalam direktori relatif terhadap proyek Anda.
+3. Di bawah direktori `build-mac`, cari file `mailcore2.xcodeproj`, dan seret ini ke proyek Xcode Anda.
 4. **For Mac** - If you're building for Mac, you can either link against MailCore 2 as a framework, or as a static library:
     * Mac framework
         - Go to Build Phases from your build target, and under 'Link Binary With Libraries', add `MailCore.framework` and `Security.framework`.
